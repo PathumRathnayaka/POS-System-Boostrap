@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Items</title>
+    <title>Customer</title>
     <link rel="stylesheet" href="boostrap/css/bootstrap.css">
     <link rel="stylesheet" href="boostrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="boostrap/css/bootstrap-grid.css">
@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="boostrap/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="boostrap/css/bootstrap-utilities.css">
     <link rel="stylesheet" href="boostrap/css/bootstrap-utilities.min.css">
-    <script src="https://kit.fontawesome.com/33180c98c0.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <header>
@@ -47,20 +46,20 @@
         </div>
     </nav>
 </header>
-<!----------------------------------insert items-------------------->
+<!----------------------------------insert Customer-------------------->
 <div>
     <form class="needs-validation" novalidate>
         <div class="form-row">
             <div class="col-md-4 mb-3">
-                <label for="validationCustom01">Item ID</label>
-                <input type="text" class="form-control" id="validationCustom01" placeholder="Item ID" value="I001" required>
+                <label for="validationCustom01">Customer ID</label>
+                <input type="text" class="form-control" id="validationCustom01" placeholder="Customer ID" value="C001" required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
             </div>
             <div class="col-md-4 mb-3">
-                <label for="validationCustom02">Item Name</label>
-                <input type="text" class="form-control" id="validationCustom02" placeholder="Item Name" value="Noodles" required>
+                <label for="validationCustom02">Customer Name</label>
+                <input type="text" class="form-control" id="validationCustom02" placeholder="Customer Name" value="Tommy" required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
@@ -79,7 +78,7 @@
             </div>-->
             <div class="col-md-4 mb-3">
                 <label for="validationCustom02">Item Qty</label>
-                <input type="text" class="form-control" id="validationCustom" placeholder="Item Qty" value="50" required>
+                <input type="text" class="form-control" id="validationCustom" placeholder="Customer Address" value="Colombo" required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
@@ -87,15 +86,15 @@
         </div>
         <div class="form-row">
             <div class="col-md-6 mb-3">
-                <label for="validationCustom03">Description</label>
-                <input type="text" class="form-control" id="validationCustom03" placeholder="" required>
+                <label for="validationCustom03">E mail</label>
+                <input type="text" class="form-control" id="validationCustom03" placeholder="@gmail.com" required>
                 <div class="invalid-feedback">
                     Please provide a valid city.
                 </div>
             </div>
             <div class="col-md-3 mb-3">
-                <label for="validationCustom04">Unit Price</label>
-                <input type="text" class="form-control" id="validationCustom04" placeholder="$0.2" required>
+                <label for="validationCustom04">Customer Contact</label>
+                <input type="text" class="form-control" id="validationCustom04" placeholder="071234567" required>
                 <div class="invalid-feedback">
                     Please provide a valid state.
                 </div>
@@ -119,9 +118,9 @@
                 </div>
             </div>
         </div>-->
-        <button class="btn btn-primary" type="save">Save Item</button>
-        <button class="btn btn-success" type="update">Update Item</button>
-        <button class="btn btn-danger" type="Ddelete">Delete Item</button>
+        <button class="btn btn-primary" type="save">Save Customer</button>
+        <button class="btn btn-success" type="update">Update Customer</button>
+        <button class="btn btn-danger" type="Ddelete">Delete Customer</button>
     </form>
 
     <!--<script>
@@ -149,20 +148,20 @@
     <table class="table table-dark">
         <thead>
         <tr>
-            <th scope="col">Item ID</th>
-            <th scope="col">Item Name</th>
-            <th scope="col">Item Qty</th>
-            <th scope="col">Description</th>
-            <th scope="col">Unit Price</th>
+            <th scope="col">Customer ID</th>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Customer Address</th>
+            <th scope="col">Customer E-mail</th>
+            <th scope="col">Customer Contact</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <th scope="row">I001</th>
-            <td>Noodles</td>
-            <td>50</td>
-            <td> </td>
-            <td>200</td>
+            <th scope="row">C001</th>
+            <td>Tommy</td>
+            <td>Colombo</td>
+            <td>@gmail.com</td>
+            <td>071234567</td>
         </tr>
         <tr>
             <th scope="row"> </th>
