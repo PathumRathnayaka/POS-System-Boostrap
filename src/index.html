@@ -26,20 +26,24 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link " style="font-size: 25px; margin-left: 100px" href="index.html" >Home <span class="sr-only">(current)</span></a>
+                    <!--<a class="nav-link " style="font-size: 25px; margin-left: 100px" href="index.html" >Home <span class="sr-only">(current)</span></a>-->
+                    <div id="Home" class="nav" style="cursor: pointer">Home</div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="font-size: 25px" href="Customer.html">Customer</a>
+                    <!--<a class="nav-link" style="font-size: 25px" href="Customer.html">Customer</a>-->
+                    <div id="Customer" class="nav" style="cursor: pointer">Customer</div>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link disabled" style="font-size: 25px" href="Items.html">Items</a>
+                    <!--<a class="nav-link disabled" style="font-size: 25px" href="Items.html">Items</a>-->
+                    <div id="Item" class="nav" style="cursor: pointer">Item</div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" style="font-size: 25px" href="Orders.html">Orders</a>
+                    <!--<a class="nav-link disabled" style="font-size: 25px" href="Orders.html">Orders</a>-->
+                    <div id="Order" class="nav" style="cursor: pointer">Order</div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" style="font-size: 25px" href="#">Help</a>
+                    <!--<a class="nav-link disabled" style="font-size: 25px" href="#">Help</a>-->
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -54,7 +58,7 @@
     <button type="button" class="btn btn-secondary btn-lg btn-block">Items</button>
     <button type="button" class="btn btn-secondary btn-lg btn-block">Orders</button>
 </div>-->
-<section id="homediv" class="container-fluid">
+<section id="homediv" class="container-fluid" style="display: block">
     <div class="col  mt-3 mt-lg-0 ">
         <div class="row">
             <div class="col">
@@ -84,5 +88,431 @@
         </div>
     </div>
 </section>
+<section id="customerPage" style="display: none">
+    <div>
+        <form class="needs-validation" novalidate>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom01">Item ID</label>
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="Item ID" value="I001" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom02">Item Name</label>
+                    <input type="text" class="form-control" id="validationCustom02" placeholder="Item Name" value="Noodles" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <!--<div class="col-md-4 mb-3">
+                    <label for="validationCustomUsername">Username</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        </div>
+                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback">
+                            Please choose a username.
+                        </div>
+                    </div>
+                </div>-->
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom02">Item Qty</label>
+                    <input type="text" class="form-control" id="validationItem01" placeholder="Item Qty" value="50" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom03">Description</label>
+                    <input type="text" class="form-control" id="validationItem02" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid city.
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom04">Unit Price</label>
+                    <input type="text" class="form-control" id="validationItem03" placeholder="$0.2" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid state.
+                    </div>
+                </div>
+                <!--<div class="col-md-3 mb-3">
+                    <label for="validationCustom05">Zip</label>
+                    <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid zip.
+                    </div>
+                </div>-->
+            </div>
+            <!--<div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                    </label>
+                    <div class="invalid-feedback">
+                        You must agree before submitting.
+                    </div>
+                </div>
+            </div>-->
+            <button class="btn btn-primary" type="save">Save Item</button>
+            <button class="btn btn-success" type="update">Update Item</button>
+            <button class="btn btn-danger" type="Ddelete">Delete Item</button>
+        </form>
+
+        <!--<script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function() {
+                'use strict';
+                window.addEventListener('load', function() {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName('needs-validation');
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function(form) {
+                        form.addEventListener('submit', function(event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                    });
+                }, false);
+            })();
+        </script>-->
+    </div>
+    <div class="table-edit">
+        <table class="table table-dark">
+            <thead>
+            <tr>
+                <th scope="col">Item ID</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Item Qty</th>
+                <th scope="col">Description</th>
+                <th scope="col">Unit Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">I001</th>
+                <td>Noodles</td>
+                <td>50</td>
+                <td> </td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <th scope="row"> </th>
+                <td> </td>
+                <td> </td>
+                <td>  </td>
+            </tr>
+            <tr>
+                <th scope="row"> </th>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+<section id="itemPage" style="display: none">
+    <div>
+        <form class="needs-validation" novalidate>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom01">Customer ID</label>
+                    <input type="text" class="form-control" id="validation01" placeholder="Customer ID" value="C001" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom02">Customer Name</label>
+                    <input type="text" class="form-control" id="validation02" placeholder="Customer Name" value="Tommy" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <!--<div class="col-md-4 mb-3">
+                    <label for="validationCustomUsername">Username</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        </div>
+                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback">
+                            Please choose a username.
+                        </div>
+                    </div>
+                </div>-->
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom02">Item Qty</label>
+                    <input type="text" class="form-control" id="validationCustom" placeholder="Customer Address" value="Colombo" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom03">E mail</label>
+                    <input type="text" class="form-control" id="validationCustom03" placeholder="@gmail.com" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid city.
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom04">Customer Contact</label>
+                    <input type="text" class="form-control" id="validationCustom04" placeholder="071234567" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid state.
+                    </div>
+                </div>
+                <!--<div class="col-md-3 mb-3">
+                    <label for="validationCustom05">Zip</label>
+                    <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid zip.
+                    </div>
+                </div>-->
+            </div>
+            <!--<div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                    </label>
+                    <div class="invalid-feedback">
+                        You must agree before submitting.
+                    </div>
+                </div>
+            </div>-->
+            <button class="btn btn-primary" type="save">Save Customer</button>
+            <button class="btn btn-success" type="update">Update Customer</button>
+            <button class="btn btn-danger" type="Ddelete">Delete Customer</button>
+        </form>
+
+        <!--<script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function() {
+                'use strict';
+                window.addEventListener('load', function() {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName('needs-validation');
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function(form) {
+                        form.addEventListener('submit', function(event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                    });
+                }, false);
+            })();
+        </script>-->
+    </div>
+    <div class="table-edit">
+        <table class="table table-dark">
+            <thead>
+            <tr>
+                <th scope="col">Customer ID</th>
+                <th scope="col">Customer Name</th>
+                <th scope="col">Customer Address</th>
+                <th scope="col">Customer E-mail</th>
+                <th scope="col">Customer Contact</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">C001</th>
+                <td>Tommy</td>
+                <td>Colombo</td>
+                <td>@gmail.com</td>
+                <td>071234567</td>
+            </tr>
+            <tr>
+                <th scope="row"> </th>
+                <td> </td>
+                <td> </td>
+                <td>  </td>
+            </tr>
+            <tr>
+                <th scope="row"> </th>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+<section id="OrderPage" style="display: none">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-header  manageCustomer " style="color: blue">Customer</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold" for="orderFormCustomerTp">Order Id :</label>
+                            <input class="form-control" id="orderId" placeholder="0001" readonly="readonly" required
+                                   type="text">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold" for="date">Date :</label>
+                            <input class="form-control" id="date" required type="date">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5">
+                            <label class="form-label fw-bold" for="navbarSupportedContent">Customer Id :</label>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Customer ID
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+
+                            </select>
+                        </div>
+                        <div class="col-md-7">
+                            <label class="form-label fw-bold" for="orderFormCustomerName">Customer Name :</label>
+                            <input class="form-control" id="orderFormCustomerName" readonly="readonly" required
+                                   type="text">
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <label class="form-label fw-bold" for="orderFormCustomerAddress">Customer Address
+                                :</label>
+                            <input class="form-control" id="orderFormCustomerAddress" readonly="readonly" required
+                                   type="text">
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold" for="orderFormCustomerTp">Customer Tp :</label>
+                            <input class="form-control" id="orderFormCustomerTp" readonly="readonly" required
+                                   type="text">
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-header  manageCustomer " style="color: blue">Items</h5>
+                    <div class="card-body">
+                        <form class="row">
+                            <div class="row mb-5">
+                                <div class="col-md-6 fw-bold">
+                                    <label class="form-label" for="orderFormItemId">Item Id :</label>
+                                    <select aria-label="Default select example" class="form-select form-select-sm mb-3"
+                                            id="orderFormItemId">
+                                        <option selected></option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6 fw-bold">
+                                    <label class="form-label" for="orderFormItemName">Item Name :</label>
+                                    <input class="form-control" id="orderFormItemName" readonly="readonly" required
+                                           type="text">
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-md-4 fw-bold">
+                                    <label class="form-label" for="orderFormQty">Item Qty :</label>
+                                    <input class="form-control" id="orderFormQty" readonly="readonly" type="text">
+                                </div>
+
+                                <div class="col-md-4 fw-bold">
+                                    <label class="form-label" for="orderFormPrice">Item Price :</label>
+                                    <input class="form-control" id="orderFormPrice" readonly="readonly" required
+                                           type="text">
+                                </div>
+
+                                <div class="col-md-4 fw-bold">
+                                    <label class="form-label" for="orderQty">Order Qty :</label>
+                                    <input class="form-control" id="orderQty" required type="text">
+                                </div>
+
+                            </div>
+
+                            <hr>
+
+                            <div>
+                                <button class="btn bg-warning p-2 text-dark bg-opacity-50 fw-bold" id="btnAddItem"
+                                        type="button">Add Item
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------table-------------->
+    <div class="table-edit">
+        <table class="table table-dark">
+            <thead>
+            <tr>
+                <th scope="col">Item ID</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Item Price</th>
+                <th scope="col">Order Qty</th>
+                <th scope="col">Total</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row"> </th>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <th scope="row"> </th>
+                <td> </td>
+                <td> </td>
+                <td>  </td>
+            </tr>
+            <tr>
+                <th scope="row"> </th>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
+<script src="boostrap/js/navbar.js"></script>
 </html>

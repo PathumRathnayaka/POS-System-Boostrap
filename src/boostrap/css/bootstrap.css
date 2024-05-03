@@ -132,6 +132,29 @@ html body {
 }
 .row{padding-left: 20px;
   padding-right: 20px;}
+.nav{
+  width: 10px;
+  height: 10px;
+  color: white;
+  font-size: 25px;
+  font-family: sans-serif;
+}
+#Home{
+
+}
+#Customer{
+  padding-left: 70px;
+}
+#Item{
+  padding-left: 120px;
+}
+#Order{
+  padding-left: 60px;
+}
+.navbar-brand{
+  padding-top: 20px;
+}
+
 
 /*--------------end----------------*/
 
