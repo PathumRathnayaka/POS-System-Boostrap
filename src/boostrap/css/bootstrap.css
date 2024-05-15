@@ -154,6 +154,9 @@ html body {
 .navbar-brand{
   padding-top: 20px;
 }
+#navbarSupportedContent{
+  padding-bottom: 25px;
+}
 
 
 /*--------------end----------------*/
